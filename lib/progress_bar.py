@@ -3,7 +3,7 @@ import sys
 
 
 def progress_bar(cur, total, end=False):
-    progress = cur * 100 // total
+    progress = 0 if total == 0 else cur * 100 // total
     sys.stdout.write("\r[%-100s] %d%%" % ('=' * progress, progress))
 
 
